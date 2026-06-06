@@ -23,14 +23,10 @@ This model fits a **2nd-degree polynomial (Parabola)** to the Log-Moneyness data
 ### 3. Safety Boundaries
 To prevent the polynomial functions from blowing up in completely unobserved tails, all extrapolated predictions are strictly clipped between `0.0001` and `2.0` (200% IV).
 
+#SCORE : 0.0000423397(KAGGLE LEADERBOARD)
 ## 🗂️ Repository Structure
 * `dataset.csv` : The raw input dataset containing `datetime`, `underlying_price`, and partially missing Call (CE) and Put (PE) implied volatilities.
 * `advanced_kaggle_pipeline.ipynb` : The main Jupyter Notebook containing the data loading, parabolic interpolation engine, and exact Kaggle-formatting logic.
 * `advanced_submission.csv` : The final generated output file ready for Kaggle evaluation.
 
-## 🚀 How to Run
 
-1. **Install Dependencies:**
-   Ensure you have the required Python libraries installed:
-   ```bash
-   pip install pandas numpy scipy
